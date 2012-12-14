@@ -1,0 +1,4 @@
+= charge_form_for(:paypal, account: "yourpaypalaccountid", html: {}) do |service|
+  - service.description t('.payment_service_invoice_description')
+  = charge_form_amount_field(service)
+  = submit_tag t('.refill')
